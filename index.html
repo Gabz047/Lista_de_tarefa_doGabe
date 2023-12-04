@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/596a6c761e.js" crossorigin="anonymous"></script>
+    <title>Lista de tarefa</title>
+</head>
+
+<body>
+    <section class="container-all">
+        <div class="container-add">
+            <input type="button" value="Adicionar Tarefa" id="btn-add">
+        </div>
+
+        <div class="container-pop">
+            <div class="titulo-tarefa"></div>
+            <button class="data-tarefa">
+                <i class="fa-solid fa-calendar-days"></i>
+            </button>
+            <div class="descricao-tarefa"></div>
+            <input type="button" class="feito-tarefa" value="Feito">
+            <input type="button" class="feito-tarefa" value="Cancelar">
+        </div>
+
+        <div class="container-standby">
+            <ul>
+                <li>
+                    <div class="tarefa-todo-box">
+                        <button class="openT-btn">
+                            <i class="fa-solid fa-arrow-down"></i>
+                        </button>
+                        <div class="tarefa-box">
+                            <div class="text-box">
+                                <p>LAVAR LOUÇA PQ SOU MULHER HAHAHA</p>
+                            </div>
+                            <div class="botoes-box">
+                                <button class="btns-toDO confirmar">
+                                    <i class="fa-solid fa-check"></i>
+                                </button>
+                                <button type="button" class="btns-toDO apagar">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+                                <button type="button" class="btns-toDO editar">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="tarefas-feitas-container">
+            <div class="tarefas-box">
+                <button class="voltar">
+                    <i class="fa-solid fa-arrow-rotate-left"></i>
+                </button>
+                <div class="text-feitas"></div>
+                <button class="excluir">
+                    <i class="fa-solid fa-trash"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
