@@ -1,20 +1,42 @@
-let standBy = document.getElementById("lista-tarefa");
-let nameTask = document.getElementById('addTarefa');
+let addBtn = document.getElementById("addbtn");
+let toDo = document.getElementById("lista-tarefa");
+let addTarefa = document.getElementById("addTarefa");
+let feitas = document.getElementById("lista-final");
 
-function addTask() {
-    let tarefaBox = document.createElement("li");
-    tarefaBox.classList.add("tarefaBox");
-    let txt = document.createElement("p");
-    txt.innerHTML = nameTask.value;
-    tarefaBox.appendChild(txt);
-    let btnExcluir = document.createElement("button");
-    btnExcluir.classList.add("btnEx-stand");
-    btnExcluir.innerText = "Excluir"
-    tarefaBox.appendChild(btnExcluir);
-    document.getElementById("lista-tarefa").appendChild(tarefaBox);
-}
+addBtn.addEventListener('click', function () {
+    if (addTarefa.value == "") {
+        alert("Erro! Escreva alguma coisa antes de adicionar a tarefa!")
+    } else {
+        let addButton = document.createElement("button");
+        let tarefaBox = document.createElement("div");
+        let txt = document.createElement("p");
+        let excluirButton = document.createElement("button");
+        addButton.innerText = ("feito");
 
-    let btnExcluir = document.getElementsByClassName("btnEx-stand");
-    btnExcluir.addEventListener("click", function() {
-        standBy.innerHTML = "";
-    });
+        txt.classList.add("txt-styling");
+        excluirButton.classList.add("btn-Excluir");
+        tarefaBox.classList.add("tarefa-box");
+        addButton.classList.add("add-tarefa");
+        txt.innerText = addTarefa.value;
+        tarefaBox.appendChild(txt)
+        tarefaBox.appendChild(addButton)
+
+        toDo.appendChild(tarefaBox);
+        addTarefa.value = "";
+        addButton.addEventListener('click', function () {
+            feitas.appendChild(tarefaBox)
+            addButton.remove()
+
+
+            excluirButton.innerText = ("excluir")
+            tarefaBox.appendChild(excluirButton)
+
+
+        })
+        excluirButton.addEventListener('click', function () {
+            tarefaBox.remove();
+
+        })
+    }
+    })
+

@@ -10,15 +10,20 @@
 </head>
 
 <body>
+    <section id="container">
+        <h1>Lista de tarefas do Gabe</h1>
     <div class="add-box">
         <input type="text" id="addTarefa" placeholder="Insira sua tarefa"></input>
-        <button id="addbtn" onclick="addTask()">ADICIONAR</button>
+        <button id="addbtn" onclick="addTask()"><i class="fa-solid fa-plus"></i></button>
     </div>
+    <h1>Para fazer</h1>
     <ol id="lista-tarefa">
     </ol>
+    <h1>Feitas</h1>
     <div class="finalizados">
         <ol id="lista-final"></ol>
     </div>
+</section>
     <script src="script.js"></script>
 </body>
 
